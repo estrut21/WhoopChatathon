@@ -51,7 +51,7 @@ export function Splash({ text, color = '#fff', bg = 'transparent' }) {
 
 export default function Shell() {
   const chat = useState(() => [
-    { id: 0, role: 'assistant', text: 'Hi, I\u2019m WHOOP Coach. Ask me about your cognitive readiness, recovery, sleep or strain today.' },
+    { id: 0, role: 'assistant', text: 'Hi, I\u2019m WHOOP Coach. Ask me about your cognitive readiness, recovery, sleep, stress or strain, and I will cite the research behind it.' },
   ]);
 
   return (

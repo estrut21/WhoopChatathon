@@ -1,19 +1,40 @@
-import { useEffect, useRef, useState } from 'react';
+import { forwardRef, useEffect, useRef, useState } from 'react';
 import { useOutletContext } from 'react-router-dom';
 import { WLogo, ArrowRight } from '../components/icons';
-import { DAYS, PERSONA, cognitiveFor, sleepFor, dashboardFor } from '../persona';
+import Evidence from '../components/Evidence';
+import { topicOf, TOPIC_LABEL } from '../evidence';
+import { DAYS, PERSONA, cognitiveFor, sleepFor, dashboardFor, stressFor } from '../persona';
 
 const day = DAYS[DAYS.length - 1];
 const r = day.raw;
 const cog = cognitiveFor(day);
 const sl = sleepFor(day);
+const st = stressFor(day);
 const metric = (key) => dashboardFor(day).find((m) => m.key === key);
 
-const SUGGESTIONS = ['How is my cognitive readiness?', 'How is my recovery?', 'How did I sleep?', 'What is my strain today?'];
+const SUGGESTIONS = ['How stressed am I?', 'How is my cognitive readiness?', 'What does research say about HRV?', 'How did I sleep?'];
 
 const RULES = [
   {
+    test: /research|evidence|stud(y|ies)|paper|pubmed|literature|science|citation|cite/,
+    topic: (q) => topicOf(q),
+    openEvidence: true,
+    answer: (q) => {
+      const topic = topicOf(q);
+      return topic
+        ? `Here is what the curated PubMed papers say about ${TOPIC_LABEL[topic]}. Each one lists what it supports and what it does not.`
+        : 'Ask about a specific topic, such as HRV, resting heart rate, sleep, stress, training load or cognitive readiness, and I will show the papers behind it.';
+    },
+  },
+  {
+    test: /stress|anxious|anxiety|pressure|overwhelm|calm|tense/,
+    topic: 'stress',
+    answer: () =>
+      `Your stress reads ${st.current} (${st.band}) as of ${st.lastUpdated} and peaked at ${st.peak.value} around ${st.peak.time}. ${st.highMin === 0 ? 'It stayed below the high zone (2.0 and above) all day. ' : `You spent ${st.highLabel} hrs in the high zone. `}Resting heart rate is ${r.resting_heart_rate} bpm against a ${r.rhr_baseline} baseline, and HRV is ${Math.round((1 - r.hrv / r.hrv_baseline) * 100)}% below its baseline.`,
+  },
+  {
     test: /cognitive|focus|mental|brain|sharp|readiness/,
+    topic: 'cognitive',
     answer: () => {
       const worst = [...cog.factors].sort((a, b) => a.pts - b.pts)[0];
       return `Your cognitive readiness is ${Math.round(cog.score)}% (${cog.band}, ${cog.confidence} confidence). ${cog.message} The biggest drag is ${worst.label.toLowerCase()} at ${worst.pts} pts; your top driver is ${cog.topDriver}.`;
@@ -21,6 +42,7 @@ const RULES = [
   },
   {
     test: /recover|ready/,
+    topic: 'recovery',
     answer: () => {
       const zone = day.recovery >= 67 ? 'green' : day.recovery >= 34 ? 'yellow' : 'red';
       return `Your recovery is ${Math.round(day.recovery)}% (${zone} zone). HRV is ${metric('hrv').value} ms against a baseline of ${metric('hrv').prev}, and resting heart rate is ${metric('rhr').value} bpm against ${metric('rhr').prev}.`;
@@ -28,20 +50,24 @@ const RULES = [
   },
   {
     test: /\bsleep|slept|\brest\b|\brem\b|\bdeep\b/,
+    topic: 'sleep',
     answer: () =>
       `You slept ${sl.total} for a ${Math.round(sl.performance)}% sleep performance and ${sl.efficiency}% efficiency: ${sl.light} light, ${sl.rem} REM and ${sl.deep} deep. You woke up ${sl.wakeUps} time${sl.wakeUps === 1 ? '' : 's'} and took ${sl.latency} minutes to fall asleep.`,
   },
   {
     test: /strain|workout|exercise|swim|activity|calor/,
+    topic: 'strain',
     answer: () =>
       `Your day strain is ${day.strain.toFixed(1)} out of 21 with ${Math.round(r.calories_burned).toLocaleString('en-US')} calories burned. ${r.workout_completed ? `You logged ${r.activity_type} for ${r.activity_duration_min} minutes.` : 'Today was a rest day, with no workout logged.'}`,
   },
   {
     test: /hrv|heart rate variab/,
+    topic: 'hrv',
     answer: () => `Your HRV is ${r.hrv} ms, below your baseline of ${r.hrv_baseline} ms. It's the biggest factor pulling your cognitive readiness down.`,
   },
   {
     test: /rhr|resting/,
+    topic: 'rhr',
     answer: () => `Your resting heart rate is ${r.resting_heart_rate} bpm, against a baseline of ${r.rhr_baseline}.`,
   },
   {
@@ -60,37 +86,42 @@ const RULES = [
 
 function respond(text) {
   const q = text.toLowerCase().trim();
-  const rule = RULES.find((r) => r.test.test(q));
-  return rule
-    ? rule.answer()
-    : 'I can answer questions about your cognitive readiness, recovery, sleep, strain, HRV and resting heart rate. Try one of those.';
+  const rule = RULES.find((rl) => rl.test.test(q));
+  if (!rule) {
+    return { text: 'I can answer questions about your cognitive readiness, recovery, sleep, strain, stress, HRV and resting heart rate. Try one of those.' };
+  }
+  return { text: rule.answer(q), topic: typeof rule.topic === 'function' ? rule.topic(q) : rule.topic, openEvidence: rule.openEvidence };
 }
 
-function Bubble({ m }) {
+const Bubble = forwardRef(function Bubble({ m }, ref) {
   const mine = m.role === 'user';
   return (
-    <div style={{ display: 'flex', justifyContent: mine ? 'flex-end' : 'flex-start', gap: 8, marginBottom: 12 }}>
+    <div ref={ref} style={{ display: 'flex', justifyContent: mine ? 'flex-end' : 'flex-start', gap: 8, marginBottom: 12, scrollMarginTop: 66 }}>
       {!mine && (
         <div style={{ width: 28, height: 28, flexShrink: 0, borderRadius: '50%', background: '#20242b', border: '1.5px solid #4d63d8', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
           <WLogo size={15} color="#dfe8ff" sw={2.4} />
         </div>
       )}
-      <div
-        style={{
-          maxWidth: '78%',
-          padding: '11px 14px',
-          fontSize: 14,
-          lineHeight: 1.45,
-          borderRadius: mine ? '18px 18px 4px 18px' : '18px 18px 18px 4px',
-          background: mine ? 'linear-gradient(135deg,#4d63d8,#2f8df0)' : 'rgba(255,255,255,0.09)',
-          color: '#fff',
-        }}
-      >
-        {m.text}
+      <div style={{ maxWidth: mine ? '78%' : 'calc(100% - 36px)', minWidth: 0 }}>
+        <div
+          style={{
+            display: 'inline-block',
+            padding: '11px 14px',
+            fontSize: 14,
+            lineHeight: 1.45,
+            borderRadius: mine ? '18px 18px 4px 18px' : '18px 18px 18px 4px',
+            background: mine ? 'linear-gradient(135deg,#4d63d8,#2f8df0)' : 'rgba(255,255,255,0.09)',
+            color: '#fff',
+            maxWidth: '100%',
+          }}
+        >
+          {m.text}
+        </div>
+        {m.topic && <Evidence topic={m.topic} defaultOpen={m.openEvidence} />}
       </div>
     </div>
   );
-}
+});
 
 export default function Chat() {
   const {
@@ -99,10 +130,13 @@ export default function Chat() {
   const [draft, setDraft] = useState('');
   const [typing, setTyping] = useState(false);
   const endRef = useRef(null);
+  const lastRef = useRef(null);
   const timer = useRef(null);
 
   useEffect(() => {
-    endRef.current?.scrollIntoView({ block: 'end' });
+    const last = messages[messages.length - 1];
+    if (!typing && last?.openEvidence) lastRef.current?.scrollIntoView({ block: 'start' });
+    else endRef.current?.scrollIntoView({ block: 'end' });
   }, [messages, typing]);
 
   useEffect(() => () => clearTimeout(timer.current), []);
@@ -114,7 +148,7 @@ export default function Chat() {
     setDraft('');
     setTyping(true);
     timer.current = setTimeout(() => {
-      setMessages((m) => [...m, { id: Date.now() + 1, role: 'assistant', text: respond(t) }]);
+      setMessages((m) => [...m, { id: Date.now() + 1, role: 'assistant', ...respond(t) }]);
       setTyping(false);
     }, 700);
   }
@@ -136,16 +170,16 @@ export default function Chat() {
           alignItems: 'center',
           justifyContent: 'center',
           gap: 3,
-          background: 'linear-gradient(180deg, rgba(20,22,24,0.96) 70%, transparent)',
+          background: 'linear-gradient(180deg, #23272a 85%, transparent)',
         }}
       >
         <span className="label" style={{ fontSize: 13, letterSpacing: '0.14em' }}>WHOOP COACH</span>
-        <span style={{ fontSize: 10.5, color: 'var(--dim)' }}>Answers from your sample data</span>
+        <span style={{ fontSize: 10.5, color: 'var(--dim)' }}>Your data + curated PubMed papers</span>
       </div>
 
       <div className="scroll" style={{ padding: '72px 16px 176px' }}>
-        {messages.map((m) => (
-          <Bubble key={m.id} m={m} />
+        {messages.map((m, i) => (
+          <Bubble key={m.id} m={m} ref={i === messages.length - 1 ? lastRef : null} />
         ))}
         {typing && (
           <div style={{ display: 'flex', gap: 8, marginBottom: 12, alignItems: 'center' }} aria-label="WHOOP Coach is typing">

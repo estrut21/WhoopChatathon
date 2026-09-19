@@ -1,0 +1,21 @@
+<!doctype html><body style="margin:0;background:#0B0D0F">
+<iframe id="f" style="width:393px;height:852px;border:0;display:block;background:transparent"></iframe>
+<script>
+const q = new URLSearchParams(location.search);
+f.src = q.get('p') || '/';
+f.onload = () => {
+  const d = f.contentDocument;
+  const st = d.createElement('style');
+  st.textContent = 'html,body{background:transparent!important}#root{padding:0!important;min-height:0!important;display:block!important}.phone{height:852px!important;max-height:none!important;box-shadow:none!important}.fade-in{animation:none!important}*{transition:none!important}';
+  d.head.appendChild(st);
+  setTimeout(() => {
+    if (q.get('q')) {
+      const input = d.querySelector('input');
+      Object.getOwnPropertyDescriptor(HTMLInputElement.prototype, 'value').set.call(input, q.get('q'));
+      input.dispatchEvent(new Event('input', { bubbles: true }));
+      setTimeout(() => d.querySelector('button[type=submit]').click(), 300);
+    }
+    setTimeout(() => { const s = d.querySelector('.scroll'); const y = Number(q.get('y') || -1); if (s && y >= 0) s.scrollTop = y; }, 2600);
+  }, 1200);
+};
+</script>

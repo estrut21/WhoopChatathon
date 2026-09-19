@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import * as I from '../components/icons';
 import { StressSpark } from '../components/Charts';
+import { DAYS, stressFor } from '../persona';
 
 const PARTICLES = Array.from({ length: 46 }, (_, i) => {
   const a = (i * 2.399) % (Math.PI * 2);
@@ -56,6 +57,7 @@ function PaceRuler({ value }) {
 }
 
 export default function Health() {
+  const stress = stressFor(DAYS[DAYS.length - 1]);
   const [scrollTop, setScrollTop] = useState(0);
   const titleOpacity = Math.max(0, Math.min(1, (scrollTop - 30) / 40));
 
@@ -214,16 +216,22 @@ export default function Health() {
             <div>
               <div className="label-dim" style={{ color: '#c4c8cc' }}>TODAY&rsquo;S HIGH STRESS</div>
               <div style={{ margin: '10px 0 12px' }}>
-                <span className="num" style={{ fontSize: 34, fontWeight: 700 }}>1:04</span>
+                <span className="num" style={{ fontSize: 34, fontWeight: 700 }}>{stress.highLabel}</span>
                 <span style={{ fontSize: 15, color: '#9aa0a6', marginLeft: 6 }}>hrs</span>
               </div>
-              <span className="row" style={{ gap: 6, background: 'rgba(245,165,36,0.16)', color: 'var(--orange)', borderRadius: 6, padding: '4px 9px', fontSize: 11.5, fontWeight: 600, display: 'inline-flex' }}>
-                <svg width="8" height="6" viewBox="0 0 9 7" fill="currentColor"><path d="M4.5 0L9 7H0z" /></svg>
-                vs. typical Sat
+              <span className="row" style={{ gap: 6, background: stress.highMin ? 'rgba(245,165,36,0.16)' : 'rgba(44,232,160,0.14)', color: stress.highMin ? 'var(--orange)' : 'var(--mint)', borderRadius: 6, padding: '4px 9px', fontSize: 11.5, fontWeight: 600, display: 'inline-flex' }}>
+                {stress.highMin ? (
+                  <>
+                    <svg width="8" height="6" viewBox="0 0 9 7" fill="currentColor"><path d="M4.5 0L9 7H0z" /></svg>
+                    vs. typical {stress.typicalDay}
+                  </>
+                ) : (
+                  <>peak {stress.peak.value}, never above 2.0</>
+                )}
               </span>
             </div>
             <div style={{ width: 170 }}>
-              <StressSpark />
+              <StressSpark series={stress.series} nowMin={stress.nowMin} />
             </div>
           </div>
         </div>

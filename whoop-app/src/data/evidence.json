@@ -1,0 +1,96 @@
+{
+  "attribution": "Literature retrieved from PubMed (NCBI). Citations include DOI links to the original articles; PubMed and the original authors retain all credit.",
+  "papers": {
+    "37754967": {
+      "pmid": "37754967",
+      "short_citation": "Renaghan et al. (2023), J Funct Morphol Kinesiol. PMID 37754967",
+      "title": "Exercise Cardiac Load and Autonomic Nervous System Recovery during In-Season Training: The Impact on Speed Deterioration in American Football Athletes.",
+      "journal": "J Funct Morphol Kinesiol",
+      "year": "2023",
+      "evidence_tier": "primary study (design unclassified)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/37754967/",
+      "doi_url": "https://doi.org/10.3390/jfmk8030134",
+      "topic": "training load -> autonomic recovery",
+      "supports": "In collegiate American football players, higher acute and cumulative exercise cardiac load was associated with slower maximum running speed, and HRV metrics were positively associated with running speed.",
+      "does_not_support": "Not a randomised trial; cannot establish that reducing load causes faster recovery. Single sport, young male-dominated cohort."
+    },
+    "31642195": {
+      "pmid": "31642195",
+      "short_citation": "Iellamo et al. (2019), Physiol Rep. PMID 31642195",
+      "title": "Autonomic nervous system responses to strength training in top-level weight lifters.",
+      "journal": "Physiol Rep",
+      "year": "2019",
+      "evidence_tier": "primary study (design unclassified)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/31642195/",
+      "doi_url": "https://doi.org/10.14814/phy2.14233",
+      "topic": "dose-dependent autonomic adaptation",
+      "supports": "In elite weightlifters, HRV indices tracked training load dose-dependently on an individual basis, and the direction of adaptation was opposite to that reported for endurance athletes.",
+      "does_not_support": "n=9. The sport-specificity finding is a caution against assuming one HRV response curve fits all training modalities."
+    },
+    "33202732": {
+      "pmid": "33202732",
+      "short_citation": "Edmonds et al. (2020), Int J Environ Res Public Health. PMID 33202732",
+      "title": "Heart Rate Variability Responses to a Training Cycle in Female Youth Rowers.",
+      "journal": "Int J Environ Res Public Health",
+      "year": "2020",
+      "evidence_tier": "primary study (design unclassified)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/33202732/",
+      "doi_url": "https://doi.org/10.3390/ijerph17228391",
+      "topic": "HRV across a training cycle",
+      "supports": "Cardiac parasympathetic modulation declined across a 15-week season in youth female rowers, though no significant relationship with training load was found.",
+      "does_not_support": "n=7. The authors explicitly note non-training stressors may drive the decline. This is evidence that HRV drifts over a season, not that load explains it."
+    },
+    "35344471": {
+      "pmid": "35344471",
+      "short_citation": "Brisola et al. (2023), Res Q Exerc Sport. PMID 35344471",
+      "title": "Monitoring Training Load, Immune-Endocrine, Autonomic Nervous System Responses, and Swimming Performance in Women's Water Polo.",
+      "journal": "Res Q Exerc Sport",
+      "year": "2023",
+      "evidence_tier": "primary study (design unclassified)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/35344471/",
+      "doi_url": "https://doi.org/10.1080/02701367.2021.1976377",
+      "topic": "training monotony, strain and overreaching",
+      "supports": "In women's water polo, training load was monitored with session-RPE, monotony and strain; five of 20 athletes were classified as overreaching.",
+      "does_not_support": "The authors found physiological markers including lnRMSSD showed LITTLE sensitivity to changes in training load and performance. Do not cite this as evidence that HRV tracks load well - it reports the opposite."
+    },
+    "30300066": {
+      "pmid": "30300066",
+      "short_citation": "Solana-Tramunt et al. (2019), Int J Sports Physiol Perform. PMID 30300066",
+      "title": "Heart-Rate Variability in Elite Synchronized Swimmers.",
+      "journal": "Int J Sports Physiol Perform",
+      "year": "2019",
+      "evidence_tier": "observational study",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/30300066/",
+      "doi_url": "https://doi.org/10.1123/ijspp.2018-0538",
+      "topic": "lnRMSSD interpretation caveats",
+      "supports": "In elite synchronised swimmers, isolated HRV assessment could give a misleading picture of autonomic status because the diving response confounds it.",
+      "does_not_support": "Sport-specific confounding. The general lesson is that a single HRV reading is not self-interpreting, not that HRV is useless."
+    },
+    "35409591": {
+      "pmid": "35409591",
+      "short_citation": "Tornero-Aguilera et al. (2022), Int J Environ Res Public Health. PMID 35409591",
+      "title": "Central and Peripheral Fatigue in Physical Exercise Explained: A Narrative Review.",
+      "journal": "Int J Environ Res Public Health",
+      "year": "2022",
+      "evidence_tier": "narrative review",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/35409591/",
+      "doi_url": "https://doi.org/10.3390/ijerph19073909",
+      "topic": "central vs peripheral fatigue",
+      "supports": "Narrative review of central and peripheral fatigue mechanisms, noting that sleep deprivation and psychological stress alter neural activation patterns.",
+      "does_not_support": "Narrative review, not systematic. Provides mechanism and vocabulary, not effect sizes."
+    },
+    "14965189": {
+      "pmid": "14965189",
+      "short_citation": "Millet et al. (2004), Sports Med. PMID 14965189",
+      "title": "Alterations of neuromuscular function after prolonged running, cycling and skiing exercises.",
+      "journal": "Sports Med",
+      "year": "2004",
+      "evidence_tier": "narrative review",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/14965189/",
+      "doi_url": "https://doi.org/10.2165/00007256-200434020-00004",
+      "topic": "central fatigue after prolonged exercise",
+      "supports": "Review of neuromuscular alterations after prolonged running, cycling and skiing; central fatigue contributes to strength loss, and its magnitude is task-dependent.",
+      "does_not_support": "Concerns acute post-exercise neuromuscular function measured in a lab, not next-day wearable readiness."
+    }
+  }
+}

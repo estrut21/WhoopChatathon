@@ -4,7 +4,7 @@ import { StressChart, StrainRecoveryChart } from '../components/Charts';
 import * as I from '../components/icons';
 import { Link } from 'react-router-dom';
 import { recoveryColor, DISCOVER } from '../data';
-import { DAYS, activitiesFor, dashboardFor, cognitiveFor, weekSlots } from '../persona';
+import { DAYS, activitiesFor, dashboardFor, cognitiveFor, weekSlots, stressFor } from '../persona';
 
 const STEEL = 'var(--steel)';
 const BLUE = 'var(--blue)';
@@ -85,6 +85,7 @@ export default function Home() {
   const activities = activitiesFor(d);
   const dashboard = dashboardFor(d);
   const cog = cognitiveFor(d);
+  const stress = stressFor(d);
   const miniOpacity = Math.max(0, Math.min(1, (scrollTop - 240) / 50));
 
   const rings = [
@@ -227,12 +228,12 @@ export default function Home() {
               <I.ChevR size={16} color="#9aa0a6" />
             </div>
             <div className="row" style={{ gap: 10, marginTop: 14 }}>
-              <div className="num" style={{ width: 30, height: 30, borderRadius: 8, background: 'rgba(44,232,160,0.16)', display: 'flex', alignItems: 'center', justifyContent: 'center', fontWeight: 700, color: 'var(--mint)', fontSize: 15 }}>
-                1.3
+              <div className="num" style={{ width: 30, height: 30, borderRadius: 8, background: stress.tint, display: 'flex', alignItems: 'center', justifyContent: 'center', fontWeight: 700, color: stress.color, fontSize: 15 }}>
+                {stress.current}
               </div>
               <div>
-                <div style={{ fontSize: 11.5, fontWeight: 700, color: 'var(--mint)', letterSpacing: '0.06em' }}>MEDIUM</div>
-                <div style={{ fontSize: 12, color: '#c4c8cc', marginTop: 2 }}>1:42 PM</div>
+                <div style={{ fontSize: 11.5, fontWeight: 700, color: stress.color, letterSpacing: '0.06em' }}>{stress.band}</div>
+                <div style={{ fontSize: 12, color: '#c4c8cc', marginTop: 2 }}>{stress.lastUpdated}</div>
               </div>
             </div>
           </button>
@@ -415,13 +416,13 @@ export default function Home() {
             <I.ChevR size={16} color="#9aa0a6" />
           </div>
           <div className="row" style={{ justifyContent: 'space-between', marginBottom: 6 }}>
-            <span style={{ fontSize: 13, color: '#b5bac0' }}>Last updated 1:42 PM</span>
+            <span style={{ fontSize: 13, color: '#b5bac0' }}>Last updated {stress.lastUpdated}</span>
             <span className="row" style={{ gap: 10 }}>
-              <span style={{ fontSize: 13, fontWeight: 700, color: 'var(--mint)', letterSpacing: '0.06em' }}>MEDIUM</span>
-              <span className="num" style={{ fontSize: 22, fontWeight: 700 }}>1.3</span>
+              <span style={{ fontSize: 13, fontWeight: 700, color: stress.color, letterSpacing: '0.06em' }}>{stress.band}</span>
+              <span className="num" style={{ fontSize: 22, fontWeight: 700 }}>{stress.current}</span>
             </span>
           </div>
-          <StressChart />
+          <StressChart series={stress.series} nowMin={stress.nowMin} />
         </div>
 
         <div className="card">
