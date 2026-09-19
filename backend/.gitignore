@@ -1,0 +1,31 @@
+.venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+
+.env
+.pytest_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Raw panel data: 20 MB, and not ours to redistribute.
+data/raw/*
+!data/raw/.gitkeep
+
+# Derived — rebuilt by `cnscoach analyze`.
+data/cache/
+
+# PubMed records are cached locally but committed, so the project works offline
+# and so the exact records behind each citation are reviewable in the diff.
+!data/evidence/
+!data/evidence/*.json
+
+.DS_Store
+.idea/
+.vscode/
+
+# Machine-local Claude Code permission grants — not shared.
+.claude/settings.local.json

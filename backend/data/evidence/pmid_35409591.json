@@ -1,0 +1,33 @@
+{
+  "pmid": "35409591",
+  "title": "Central and Peripheral Fatigue in Physical Exercise Explained: A Narrative Review.",
+  "journal": "Int J Environ Res Public Health",
+  "year": "2022",
+  "authors": [
+    "Tornero-Aguilera JF",
+    "Jimenez-Morcillo J",
+    "Rubio-Zarapuz A",
+    "Clemente-Su\u00e1rez VJ"
+  ],
+  "abstract": "The study of the origin and implications of fatigue in exercise has been widely investigated, but not completely understood given the complex multifactorial mechanisms involved. Then, it is essential to understand the fatigue mechanism to help trainers and physicians to prescribe an adequate training load. The present narrative review aims to analyze the multifactorial factors of fatigue in physical exercise. To reach this aim, a consensus and critical review were performed using both primary sources, such as scientific articles, and secondary ones, such as bibliographic indexes, web pages, and databases. The main search engines were PubMed, SciELO, and Google Scholar. Central and peripheral fatigue are two unison constructs part of the Integrative Governor theory, in which both psychological and physiological drives and requirements are underpinned by homeostatic principles. The relative activity of each one is regulated by dynamic negative feedback activity, as the fundamental general operational controller. Fatigue is conditioned by factors such as gender, affecting men and women differently. Sleep deprivation or psychological disturbances caused, for example, by stress, can affect neural activation patterns, realigning them and slowing down simple mental operations in the context of fatigue. Then, fatigue can have different origins not only related with physiological factors. Therefore, all these prisms must be considered for future approaches from sport and clinical perspectives.",
+  "doi": "10.3390/ijerph19073909",
+  "pmc": "PMC8997532",
+  "publication_types": [
+    "Journal Article",
+    "Review",
+    "Research Support, Non-U.S. Gov't"
+  ],
+  "mesh_terms": [
+    "COVID-19",
+    "Exercise",
+    "Fatigue",
+    "Female",
+    "Humans",
+    "Male",
+    "Sports"
+  ],
+  "retrieved_at": "2026-09-19T18:23:43.621514+00:00",
+  "short_citation": "Tornero-Aguilera et al. (2022), Int J Environ Res Public Health. PMID 35409591",
+  "url": "https://pubmed.ncbi.nlm.nih.gov/35409591/",
+  "evidence_tier": "narrative review"
+}

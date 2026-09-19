@@ -1,0 +1,33 @@
+{
+  "pmid": "37754967",
+  "title": "Exercise Cardiac Load and Autonomic Nervous System Recovery during In-Season Training: The Impact on Speed Deterioration in American Football Athletes.",
+  "journal": "J Funct Morphol Kinesiol",
+  "year": "2023",
+  "authors": [
+    "Renaghan E",
+    "Wittels HL",
+    "Feigenbaum LA",
+    "Wishon MJ",
+    "Chong S",
+    "Wittels ED",
+    "Hendricks S",
+    "Hecocks D",
+    "Bellamy K",
+    "Girardi J",
+    "Lee S",
+    "Vo T",
+    "McDonald SM",
+    "Wittels SH"
+  ],
+  "abstract": "Fully restoring autonomic nervous system (ANS) function is paramount for peak sports performance. Training programs failing to provide sufficient recovery, especially during the in-season, may negatively affect performance. This study aimed to evaluate the influence of the physiological workload of collegiate football training on ANS recovery and function during the in-season. Football athletes recruited from a D1 college in the southeastern US were prospectively followed during their 13-week \"in-season\". Athletes wore armband monitors equipped with ECG and inertial movement capabilities that measured exercise cardiac load (ECL; total heartbeats) and maximum running speed during and baseline heart rate (HR), HR variability (HRV) 24 h post-training. These metrics represented physiological load (ECL = HR\u00b7Duration), ANS function, and recovery, respectively. Linear regression models evaluated the associations between ECL, baseline HR, HRV, and maximum running speed. Athletes (n = 30) were 20.2 \u00b1 1.5 years, mostly non-Hispanic Black (80.0%). Negative associations were observed between acute and cumulative exposures of ECLs and running speed (\u03b2 = -0.11 \u00b1 0.00, p < 0.0000 and \u03b2 = -0.15 \u00b1 0.04, p < 0.0000, respectively). Similarly, negative associations were found between baseline HR and running speed (\u03b2 = -0.45 \u00b1 0.12, 95% CI: -0.70, -0.19; p = 0.001). HRV metrics were positively associated with running speed: (SDNN: \u03b2 = 0.32 \u00b1 0.09, p < 0.03 and rMSSD: \u03b2 = 0.35 \u00b1 0.11, p < 0.02). Our study demonstrated that exposure to high ECLs, both acutely and cumulatively, may negatively influence maximum running speed, which may manifest in a deteriorating ANS. Further research should continue identifying optimal training: recovery ratios during off-, pre-, and in-season phases.",
+  "doi": "10.3390/jfmk8030134",
+  "pmc": "PMC10532057",
+  "publication_types": [
+    "Journal Article"
+  ],
+  "mesh_terms": [],
+  "retrieved_at": "2026-09-19T18:23:43.621514+00:00",
+  "short_citation": "Renaghan et al. (2023), J Funct Morphol Kinesiol. PMID 37754967",
+  "url": "https://pubmed.ncbi.nlm.nih.gov/37754967/",
+  "evidence_tier": "primary study (design unclassified)"
+}

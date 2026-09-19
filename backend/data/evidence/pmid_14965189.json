@@ -1,0 +1,32 @@
+{
+  "pmid": "14965189",
+  "title": "Alterations of neuromuscular function after prolonged running, cycling and skiing exercises.",
+  "journal": "Sports Med",
+  "year": "2004",
+  "authors": [
+    "Millet GY",
+    "Lepers R"
+  ],
+  "abstract": "It is well known that impairment of performance resulting from muscle fatigue differs according to the types of contraction involved, the muscular groups tested and the exercise duration/intensity. Depending on these variables, strength loss with fatigue can originate from several sites from the motor cortex through to contractile elements. This has been termed 'task dependency of muscle fatigue'. Only recently have studies focused on the origin of muscle fatigue after prolonged exercise lasting 30 minutes to several hours. Central fatigue has been shown to contribute to muscle fatigue during long-distance running by using different methods such as the twitch interpolation technique, the ratio of the electromyogram (EMG) signal during maximal voluntary contraction normalised to the M-wave amplitude or the comparison of the forces achieved with voluntary- and electrically-evoked contractions. Some central activation deficit has also been observed for knee extensor muscles in cycling but central fatigue after activities inducing low muscular damage was attenuated compared with running. While supraspinal fatigue cannot be ruled out, it can be suggested that spinal adaptation, such as inhibition from type III and IV group afferents or disfacilitation from muscle spindles, contributes to the reduced neural drive after prolonged exercise. It has been shown that after a 30 km run, individuals with the greatest knee extensor muscle strength loss experienced a significant activation deficit. However, central fatigue alone cannot explain the entire strength loss after prolonged exercise. Alterations of neuromuscular propagation, excitation-contraction coupling failure and modifications of the intrinsic capability of force production may also be involved. Electrically-evoked contractions and associated EMG can help to characterise peripheral fatigue. The purpose of this review is to further examine the central and peripheral mechanisms contributing to strength loss after prolonged running, cycling and skiing exercises.",
+  "doi": "10.2165/00007256-200434020-00004",
+  "pmc": "",
+  "publication_types": [
+    "Journal Article",
+    "Review"
+  ],
+  "mesh_terms": [
+    "Bicycling",
+    "Biomechanical Phenomena",
+    "Electromyography",
+    "Humans",
+    "Muscle Fatigue",
+    "Nervous System",
+    "Running",
+    "Skiing",
+    "Time Factors"
+  ],
+  "retrieved_at": "2026-09-19T18:23:43.621514+00:00",
+  "short_citation": "Millet et al. (2004), Sports Med. PMID 14965189",
+  "url": "https://pubmed.ncbi.nlm.nih.gov/14965189/",
+  "evidence_tier": "narrative review"
+}
