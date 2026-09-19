@@ -1,0 +1,31 @@
+{
+  "pmid": "33202732",
+  "title": "Heart Rate Variability Responses to a Training Cycle in Female Youth Rowers.",
+  "journal": "Int J Environ Res Public Health",
+  "year": "2020",
+  "authors": [
+    "Edmonds R",
+    "Egan-Shuttler J",
+    "Ives SJ"
+  ],
+  "abstract": "Heart rate variability (HRV) is a reputable estimate of cardiac autonomic function used across multiple athletic populations to document the cardiac autonomic responses to sport demands. However, there is a knowledge gap of HRV responses in female youth rowers. Thus, the purpose of this study was to measure HRV weekly, over a 15-week training period, covering pre-season and up to competition in youth female rowers, in order to understand the physiological response to long-term training and discern how fluctuations in HRV may relate to performance in this population. Measures of heart rate and heart rate variability were recorded before training each Friday over the monitoring period in seven athletes. Analysis of heart rate variability focused on time domain indices, the standard deviation of all normal to normal R-R wave intervals, and the root mean square of successive differences as markers of cardiac parasympathetic modulation. Training load was quantified by multiplying the rating of perceived exertion of the weeks training and training duration. A decrease was identified in cardiac parasympathetic modulation as the season progressed (Effect Size (Cohen's d) = -0.34 to -0.8, weeks 6 and 11-15), despite no significant relationship between training load and heart rate variability. Factors outside of training may further compound the reduction in heart rate variability, with further monitoring of external stressors (e.g., school) in adolescent athletes.",
+  "doi": "10.3390/ijerph17228391",
+  "pmc": "PMC7697086",
+  "publication_types": [
+    "Journal Article"
+  ],
+  "mesh_terms": [
+    "Adolescent",
+    "Athletes",
+    "Autonomic Nervous System",
+    "Exercise",
+    "Female",
+    "Heart Rate",
+    "Humans",
+    "Water Sports"
+  ],
+  "retrieved_at": "2026-09-19T18:23:43.621514+00:00",
+  "short_citation": "Edmonds et al. (2020), Int J Environ Res Public Health. PMID 33202732",
+  "url": "https://pubmed.ncbi.nlm.nih.gov/33202732/",
+  "evidence_tier": "primary study (design unclassified)"
+}

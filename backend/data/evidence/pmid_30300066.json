@@ -1,0 +1,43 @@
+{
+  "pmid": "30300066",
+  "title": "Heart-Rate Variability in Elite Synchronized Swimmers.",
+  "journal": "Int J Sports Physiol Perform",
+  "year": "2019",
+  "authors": [
+    "Solana-Tramunt M",
+    "Morales J",
+    "Busc\u00e0 B",
+    "Carbonell M",
+    "Rodr\u00edguez-Zamora L"
+  ],
+  "abstract": "PURPOSE: To determine whether heart-rate variability (HRV) was correlated with other training-load and training-tolerance markers for monitoring the effect of a training session on elite synchronized swimmers. METHODS: The authors recorded the resting HRV of 12 elite swimmers (mean age\u2009=\u200921.5 [3.5]\u00a0y) 3 times over 1 wk with a cadence of 48\u00a0h prior to the 2015 World Swimming Championships. They continuously monitored heart rate and obtained salivary cortisol (SC) samples before and after the last training session of the week. The authors measured capillary blood lactate (La) 2, 4, and 8\u00a0min after the last training session and monitored recovery HRV. They assessed rating of perceived exertion (RPE) over the entire session and tested the association between the highest La concentration (Lapeak), SC, and RPE and relative changes (\u0394%) in the natural logarithm of the root-mean-square successive difference of intervals (LnRMSSD). The authors also calculated the smallest worthwhile change of the averaged pre and post LnRMSSD measurements. RESULTS: There were periods of pronounced bradycardia (60.5 [16.7]\u00a0beats/min) during training exercises corresponding to apneic exercise. The magnitude-based inferences showed nonclinically meaningful changes of LnRMSSD. Lapeak (6.8 [2.7] mmol/L) correlated positively with \u0394%LnRMSSD and \u0394%SC (r\u2009=\u2009.89, P\u2009=\u2009.001 and r\u2009=\u2009.61, P\u2009=\u2009.04, respectively). CONCLUSIONS: There was no change in LnRMSSD and Lapeak, \u0394%SC, and RPE indicated reduced sympathetic activation and positive adaptation to the stress imposed by the session. Isolated HRV assessment may reveal a controversial interpretation of autonomic nervous system status or the training tolerance in elite synchronized swimming athletes due to the influence of the diving response.",
+  "doi": "10.1123/ijspp.2018-0538",
+  "pmc": "",
+  "publication_types": [
+    "Journal Article",
+    "Observational Study"
+  ],
+  "mesh_terms": [
+    "Adult",
+    "Algorithms",
+    "Breath Holding",
+    "Female",
+    "Heart Rate",
+    "Humans",
+    "Hydrocortisone",
+    "Lactic Acid",
+    "Monitoring, Physiologic",
+    "Oxygen Consumption",
+    "Perception",
+    "Physical Conditioning, Human",
+    "Physical Exertion",
+    "Saliva",
+    "Swimming",
+    "Wearable Electronic Devices",
+    "Young Adult"
+  ],
+  "retrieved_at": "2026-09-19T18:23:43.621514+00:00",
+  "short_citation": "Solana-Tramunt et al. (2019), Int J Sports Physiol Perform. PMID 30300066",
+  "url": "https://pubmed.ncbi.nlm.nih.gov/30300066/",
+  "evidence_tier": "observational study"
+}

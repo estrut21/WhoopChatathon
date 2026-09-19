@@ -1,0 +1,37 @@
+{
+  "pmid": "35777076",
+  "title": "The effects of physical activity on cortisol and sleep: A systematic review and meta-analysis.",
+  "journal": "Psychoneuroendocrinology",
+  "year": "2022",
+  "authors": [
+    "De Nys L",
+    "Anderson K",
+    "Ofosu EF",
+    "Ryde GC",
+    "Connelly J",
+    "Whittaker AC"
+  ],
+  "abstract": "BACKGROUND: Managing stress and having good quality sleep are inter-related factors that are essential for health, and both factors seem to be affected by physical activity. Although there is an established bidirectional relationship between stress and sleep, remarkably few studies have been designed to examine the effects of physical activity on cortisol, a key biomarker for stress, and sleep. Research is particularly scarce in older people despite both sleep and cortisol changing with age. This systematic literature review addresses this gap. METHODS: A systematic review was conducted following the PRISMA guidelines. Original, peer-reviewed records of intervention studies such as randomized controlled trials (RCTs) and non-RCTs with relevant control groups were eligible for inclusion. The Participant, Intervention, Comparison, Outcome (PICO) characteristics were (1) adults or older adults (2) physical activity programmes of any duration, (3) controls receiving no intervention or controls included in a different programme, (4) cortisol measurement, and subjective or objective measures of sleep. RESULTS: Ten original studies with low-to-moderate risk of bias were included. Findings from this review indicated with moderate- and low-certainty evidence, respectively, that physical activity was an effective strategy for lowering cortisol levels (SMD [95% CI] = -0.37 [-0.52, -0.21] p\u00a0<\u00a0.001) and improving sleep quality (SMD [95% CI] = -0.30 [-0.56, -0.04], p\u00a0=\u00a0.02). Caution is needed to generalize these findings to the general population, as included trials were predominantly participants with breast cancer, included few males and no older adults. CONCLUSION: Cortisol regulation and sleep quality are intertwined, and physical activity programmes could improve both in several ways. Further, physical activity may benefit adults with long term conditions or current poor (mental) health states the most, although more research is needed to support this claim fully. Few intervention studies have examined the inter-relationship between cortisol and sleep outcomes in males or older adults, indicating fruitful enquiry for future research.",
+  "doi": "10.1016/j.psyneuen.2022.105843",
+  "pmc": "",
+  "publication_types": [
+    "Journal Article",
+    "Meta-Analysis",
+    "Systematic Review"
+  ],
+  "mesh_terms": [
+    "Aged",
+    "Breast Neoplasms",
+    "Exercise",
+    "Humans",
+    "Hydrocortisone",
+    "Male",
+    "Mental Health",
+    "Quality of Life",
+    "Sleep"
+  ],
+  "retrieved_at": "2026-09-19T18:47:32.726446+00:00",
+  "short_citation": "De et al. (2022), Psychoneuroendocrinology. PMID 35777076",
+  "url": "https://pubmed.ncbi.nlm.nih.gov/35777076/",
+  "evidence_tier": "systematic review / meta-analysis"
+}

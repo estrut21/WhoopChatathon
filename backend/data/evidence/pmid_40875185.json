@@ -1,0 +1,45 @@
+{
+  "pmid": "40875185",
+  "title": "A New Ashwagandha Formulation (Zenroot\u2122) Alleviates Stress and Anxiety Symptoms While Improving Mood and Sleep Quality: A Randomized, Double-Blind, Placebo-Controlled Clinical Study.",
+  "journal": "Adv Ther",
+  "year": "2025",
+  "authors": [
+    "Mahadevan M",
+    "Gopukumar K",
+    "Gupta R",
+    "Morde A",
+    "Patni P",
+    "Srinivas SS",
+    "Bhuvanendran A",
+    "Phanindra A"
+  ],
+  "abstract": "INTRODUCTION: Prolonged exposure to stress may lead to low mood, anxiety, depression, insomnia, and metabolic disorders. Ashwagandha, an established adaptogen, is known to combat stress. We studied the safety and efficacy of Ashwagandha formulation, Zenroot\u2122 (ZEN), containing 1.5% total withanolides on stress, anxiety, mood, and sleep quality in human subjects with non-chronic mild to moderate stress. METHODS: This was a prospective, randomized, double-blind, parallel, placebo-controlled, clinical interventional study with supplementation duration of 84\u00a0days. Ninety subjects were randomly assigned in a 1:1 ratio to receive 125\u00a0mg of ZEN or placebo. We measured stress using the Perceived Stress Scale (PSS) score as a primary endpoint. Various secondary endpoints included Mindfield eSense Skin Response (SCR) and Mindfield eSense PULSE Heart Rate Variability (HRV)-Root Mean Square of Successive Differences (RMSSD), and standard deviation of normal NN interval (SDNN), Beck Anxiety Inventory (BAI), Profile of Mood States (POMS), Pittsburgh Sleep Quality Index (PSQI), stress biomarkers of serum cortisol, and salivary alpha amylase (sAA) levels and safety parameters. The study assessments were performed on days 0, 14, 28, 56, and 84. RESULTS: All 90 randomized subjects completed the study. Mean\u00a0\u00b1\u00a0standard error (SE) age of subjects in the ZEN group was 35.5\u00a0\u00b1\u00a01.3\u00a0years and in the placebo group was 34.5\u00a0\u00b1\u00a01.2\u00a0years. ZEN 125\u00a0mg showed significant (p\u00a0<\u00a00.05) improvements in PSS, BAI, and PSQI scores on days 28, 56, and 84; SCR on days 14, 28, and 84 and trend (p\u00a0<\u00a00.1) on day 56; HRV-RMSSD and SDNN on day 14; and POMS on days 56 and 84. No significant differences were observed between the two groups for serum cortisol and sAA. The study product was well tolerated without any safety concerns. CONCLUSION: We observed significant reductions in both subjective and objective measures of stress with improvement in mood, sleep quality, and occasional anxiety symptoms. ZEN was well tolerated without any related adverse events. Future clinical studies are warranted to evaluate the effect of ZEN on chronically stressed adults. CLINICAL TRIAL REGISTRATION NUMBER: http://ctri.nic.in/ Identifier:CTRI/2024/03/063786.",
+  "doi": "10.1007/s12325-025-03327-z",
+  "pmc": "PMC12474591",
+  "publication_types": [
+    "Journal Article",
+    "Randomized Controlled Trial"
+  ],
+  "mesh_terms": [
+    "Humans",
+    "Double-Blind Method",
+    "Female",
+    "Male",
+    "Adult",
+    "Anxiety",
+    "Stress, Psychological",
+    "Sleep Quality",
+    "Affect",
+    "Middle Aged",
+    "Prospective Studies",
+    "Plant Extracts",
+    "Hydrocortisone",
+    "Phytotherapy",
+    "Treatment Outcome",
+    "Young Adult"
+  ],
+  "retrieved_at": "2026-09-19T18:47:32.726446+00:00",
+  "short_citation": "Mahadevan et al. (2025), Adv Ther. PMID 40875185",
+  "url": "https://pubmed.ncbi.nlm.nih.gov/40875185/",
+  "evidence_tier": "randomised controlled trial"
+}
