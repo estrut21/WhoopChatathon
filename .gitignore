@@ -1,0 +1,3 @@
+# Local reference files (personal health data / third-party content) - keep out of the public repo
+ScreenRecording_*.mp4
+/image.png
