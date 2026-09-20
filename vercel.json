@@ -1,0 +1,6 @@
+{
+  "installCommand": "npm --prefix whoop-app install",
+  "buildCommand": "npm --prefix whoop-app run build",
+  "outputDirectory": "whoop-app/dist",
+  "rewrites": [{ "source": "/(.*)", "destination": "/index.html" }]
+}
